@@ -9,10 +9,11 @@ module "serviceauthcentral_kms_gcp" {
 
 module "crossfiresyncrun" {
     # TODO: This should pull in a release version of the module, not just pull from main
-    source     = "git::https://github.com/UnitVectorY-Labs/crossfiresyncrun-tofu.git?ref=main"
-    name       = var.name
-    project_id = var.project_id
-    regions    = var.regions
+    source                    = "git::https://github.com/UnitVectorY-Labs/crossfiresyncrun-tofu.git?ref=main"
+    name                      = var.name
+    project_id                = var.project_id
+    regions                   = var.regions
+    firestore_deletion_policy = var.firestore_deletion_policy
 }
 
 module "serviceauthcentral_firestore_gcp" {
