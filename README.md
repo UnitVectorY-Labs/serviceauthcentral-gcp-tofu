@@ -24,7 +24,7 @@ No providers.
 | <a name="module_serviceauthcentral_firestore_gcp"></a> [serviceauthcentral\_firestore\_gcp](#module\_serviceauthcentral\_firestore\_gcp) | ./serviceauthcentral-firestore-gcp-tofu | n/a |
 | <a name="module_serviceauthcentral_kms_gcp"></a> [serviceauthcentral\_kms\_gcp](#module\_serviceauthcentral\_kms\_gcp) | ./serviceauthcentral-kms-gcp-tofu | n/a |
 | <a name="module_serviceauthcentral_manage_gcp"></a> [serviceauthcentral\_manage\_gcp](#module\_serviceauthcentral\_manage\_gcp) | git::https://github.com/UnitVectorY-Labs/serviceauthcentral-manage-gcp-tofu.git | main |
-| <a name="module_serviceauthcentral_token_gcp"></a> [serviceauthcentral\_token\_gcp](#module\_serviceauthcentral\_token\_gcp) | git::https://github.com/UnitVectorY-Labs/serviceauthcentral-token-gcp-tofu.git | main |
+| <a name="module_serviceauthcentral_token_gcp"></a> [serviceauthcentral\_token\_gcp](#module\_serviceauthcentral\_token\_gcp) | ./serviceauthcentral-token-gcp-tofu | n/a |
 
 ## Resources
 
