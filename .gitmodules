@@ -1,0 +1,3 @@
+[submodule "crossfiresyncrun-tofu"]
+	path = crossfiresyncrun-tofu
+	url = https://github.com/UnitVectorY-Labs/crossfiresyncrun-tofu
