@@ -1,7 +1,6 @@
 
 module "serviceauthcentral_kms_gcp" {
-    # TODO: This should pull in a release version of the module, not just pull from main
-    source           = "git::https://github.com/UnitVectorY-Labs/serviceauthcentral-kms-gcp-tofu.git?ref=main"
+    source           = "./serviceauthcentral-kms-gcp-tofu"
     name             = var.name
     project_id       = var.project_id
     kms_existing_key = var.kms_existing_key

@@ -1,3 +1,6 @@
 [submodule "crossfiresyncrun-tofu"]
 	path = crossfiresyncrun-tofu
 	url = https://github.com/UnitVectorY-Labs/crossfiresyncrun-tofu
+[submodule "serviceauthcentral-kms-gcp-tofu"]
+	path = serviceauthcentral-kms-gcp-tofu
+	url = https://github.com/UnitVectorY-Labs/serviceauthcentral-kms-gcp-tofu.git
