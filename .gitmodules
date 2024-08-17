@@ -10,3 +10,6 @@
 [submodule "serviceauthcentral-token-gcp-tofu"]
 	path = serviceauthcentral-token-gcp-tofu
 	url = https://github.com/UnitVectorY-Labs/serviceauthcentral-token-gcp-tofu.git
+[submodule "serviceauthcentral-manage-gcp-tofu"]
+	path = serviceauthcentral-manage-gcp-tofu
+	url = https://github.com/UnitVectorY-Labs/serviceauthcentral-manage-gcp-tofu.git

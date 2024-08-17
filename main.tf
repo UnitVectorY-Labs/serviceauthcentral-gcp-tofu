@@ -58,8 +58,7 @@ module "serviceauthcentral_token_gcp" {
 }
 
 module "serviceauthcentral_manage_gcp" {
-    # TODO: This should pull in a release version of the module, not just pull from main
-    source           = "git::https://github.com/UnitVectorY-Labs/serviceauthcentral-manage-gcp-tofu.git?ref=main"
+    source           = "./serviceauthcentral-manage-gcp-tofu"
     name             = var.name
     project_id       = var.project_id
     regions          = var.regions
