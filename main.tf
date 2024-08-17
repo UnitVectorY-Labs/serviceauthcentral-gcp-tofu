@@ -21,7 +21,6 @@ module "crossfiresyncrun" {
 
 module "serviceauthcentral_firestore_gcp" {
     for_each              = toset(var.regions)
-    # TODO: This should pull in a release version of the module, not just pull from main
     source                = "./serviceauthcentral-firestore-gcp-tofu"
     database_name         = "${var.name}-${each.value}"
     project_id            = var.project_id
@@ -35,8 +34,7 @@ locals {
 }
 
 module "serviceauthcentral_token_gcp" {
-    # TODO: This should pull in a release version of the module, not just pull from main
-    source          = "git::https://github.com/UnitVectorY-Labs/serviceauthcentral-token-gcp-tofu.git?ref=main"
+    source          = "./serviceauthcentral-token-gcp-tofu"
     name            = var.name
     project_id      = var.project_id
     regions         = var.regions

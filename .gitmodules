@@ -7,3 +7,6 @@
 [submodule "serviceauthcentral-firestore-gcp-tofu"]
 	path = serviceauthcentral-firestore-gcp-tofu
 	url = https://github.com/UnitVectorY-Labs/serviceauthcentral-firestore-gcp-tofu.git
+[submodule "serviceauthcentral-token-gcp-tofu"]
+	path = serviceauthcentral-token-gcp-tofu
+	url = https://github.com/UnitVectorY-Labs/serviceauthcentral-token-gcp-tofu.git
