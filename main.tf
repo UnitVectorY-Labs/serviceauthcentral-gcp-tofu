@@ -1,15 +1,12 @@
-
 module "serviceauthcentral_kms_gcp" {
-    # TODO: This should pull in a release version of the module, not just pull from main
-    source           = "git::https://github.com/UnitVectorY-Labs/serviceauthcentral-kms-gcp-tofu.git?ref=main"
+    source           = "git::https://github.com/UnitVectorY-Labs/serviceauthcentral-kms-gcp-tofu.git?ref=${var.serviceauthcentral_kms_gcp_version}"
     name             = var.name
     project_id       = var.project_id
     kms_existing_key = var.kms_existing_key
 }
 
 module "crossfiresyncrun" {
-    # TODO: This should pull in a release version of the module, not just pull from main
-    source                       = "git::https://github.com/UnitVectorY-Labs/crossfiresyncrun-tofu.git?ref=main"
+    source                       = "git::https://github.com/UnitVectorY-Labs/crossfiresyncrun-tofu.git?ref=${var.crossfiresyncrun_version}"
     name                         = var.name
     project_id                   = var.project_id
     regions                      = var.regions
@@ -18,13 +15,11 @@ module "crossfiresyncrun" {
     artifact_registry_name       = var.artifact_registry_name
     artifact_registry_project_id = var.artifact_registry_project_id
     crossfiresyncrun_tag         = var.crossfiresyncrun_tag
-    
 }
 
 module "serviceauthcentral_firestore_gcp" {
     for_each              = toset(var.regions)
-    # TODO: This should pull in a release version of the module, not just pull from main
-    source                = "git::https://github.com/UnitVectorY-Labs/serviceauthcentral-firestore-gcp-tofu.git?ref=main"
+    source                = "git::https://github.com/UnitVectorY-Labs/serviceauthcentral-firestore-gcp-tofu.git?ref=${var.serviceauthcentral_firestore_gcp_version}"
     database_name         = "${var.name}-${each.value}"
     project_id            = var.project_id
     region                = each.value
@@ -37,8 +32,7 @@ locals {
 }
 
 module "serviceauthcentral_token_gcp" {
-    # TODO: This should pull in a release version of the module, not just pull from main
-    source          = "git::https://github.com/UnitVectorY-Labs/serviceauthcentral-token-gcp-tofu.git?ref=main"
+    source          = "git::https://github.com/UnitVectorY-Labs/serviceauthcentral-token-gcp-tofu.git?ref=${var.serviceauthcentral_token_gcp_version}"
     name            = var.name
     project_id      = var.project_id
     regions         = var.regions
@@ -46,7 +40,6 @@ module "serviceauthcentral_token_gcp" {
     key_ring_name   = module.serviceauthcentral_kms_gcp.key_ring_name
     sign_key_name   = module.serviceauthcentral_kms_gcp.key_name
 
-    # The configuration
     sac_issuer = var.sac_issuer
     sac_cors_origins = var.sac_cors_origins
     sac_user_redirecturi = var.sac_user_redirecturi
@@ -62,8 +55,7 @@ module "serviceauthcentral_token_gcp" {
 }
 
 module "serviceauthcentral_manage_gcp" {
-    # TODO: This should pull in a release version of the module, not just pull from main
-    source           = "git::https://github.com/UnitVectorY-Labs/serviceauthcentral-manage-gcp-tofu.git?ref=main"
+    source           = "git::https://github.com/UnitVectorY-Labs/serviceauthcentral-manage-gcp-tofu.git?ref=${var.serviceauthcentral_manage_gcp_version}"
     name             = var.name
     project_id       = var.project_id
     regions          = var.regions

@@ -83,6 +83,36 @@ variable "artifact_registry_project_id" {
   }
 }
 
+variable "serviceauthcentral_kms_gcp_version" {
+  description = "Version of the serviceauthcentral_kms_gcp module"
+  type        = string
+  default     = "main" # Default to the most recent version (the main branch)
+}
+
+variable "crossfiresyncrun_version" {
+  description = "Version of the crossfiresyncrun module"
+  type        = string
+  default     = "main" # Default to the most recent version (the main branch)
+}
+
+variable "serviceauthcentral_firestore_gcp_version" {
+  description = "Version of the serviceauthcentral_firestore_gcp module"
+  type        = string
+  default     = "main" # Default to the most recent version (the main branch)
+}
+
+variable "serviceauthcentral_token_gcp_version" {
+  description = "Version of the serviceauthcentral_token_gcp module"
+  type        = string
+  default     = "main" # Default to the most recent version (the main branch)
+}
+
+variable "serviceauthcentral_manage_gcp_version" {
+  description = "Version of the serviceauthcentral_manage_gcp module"
+  type        = string
+  default     = "main" # Default to the most recent version (the main branch)
+}
+
 variable "crossfiresyncrun_tag" {
   description = "The tag for the crossfiresyncrun image to deploy"
   type        = string
