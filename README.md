@@ -3,3 +3,14 @@
 # serviceauthcentral-gcp-tofu
 
 OpenTofu module for deploying a fully working ServiceAuthCentral deployment
+
+## Usage
+
+The basic use of this module is as follows:
+
+```hcl
+TODO
+```
+
+<!-- BEGIN_TF_DOCS -->
+<!-- END_TF_DOCS -->
