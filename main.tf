@@ -9,11 +9,16 @@ module "serviceauthcentral_kms_gcp" {
 
 module "crossfiresyncrun" {
     # TODO: This should pull in a release version of the module, not just pull from main
-    source                    = "git::https://github.com/UnitVectorY-Labs/crossfiresyncrun-tofu.git?ref=main"
-    name                      = var.name
-    project_id                = var.project_id
-    regions                   = var.regions
-    firestore_deletion_policy = var.firestore_deletion_policy
+    source                       = "git::https://github.com/UnitVectorY-Labs/crossfiresyncrun-tofu.git?ref=main"
+    name                         = var.name
+    project_id                   = var.project_id
+    regions                      = var.regions
+    firestore_deletion_policy    = var.firestore_deletion_policy
+    artifact_registry_host       = var.artifact_registry_host
+    artifact_registry_name       = var.artifact_registry_name
+    artifact_registry_project_id = var.artifact_registry_project_id
+    crossfiresyncrun_tag         = var.crossfiresyncrun_tag
+    
 }
 
 module "serviceauthcentral_firestore_gcp" {
@@ -48,6 +53,11 @@ module "serviceauthcentral_token_gcp" {
     sac_user_provider_github_clientid = var.sac_user_provider_github_clientid
     sac_user_provider_github_clientsecret = var.sac_user_provider_github_clientsecret
 
+    artifact_registry_host       = var.artifact_registry_host
+    artifact_registry_name       = var.artifact_registry_name
+    artifact_registry_project_id = var.artifact_registry_project_id
+    serviceauthcentral_token_tag = var.serviceauthcentral_token_tag
+
     depends_on            = [ module.crossfiresyncrun ]
 }
 
@@ -58,7 +68,14 @@ module "serviceauthcentral_manage_gcp" {
     project_id       = var.project_id
     regions          = var.regions
     region_db_names  = local.region_db_names
+
     sac_issuer       = var.sac_issuer
     sac_cors_origins = var.sac_cors_origins
+
+    artifact_registry_host        = var.artifact_registry_host
+    artifact_registry_name        = var.artifact_registry_name
+    artifact_registry_project_id  = var.artifact_registry_project_id
+    serviceauthcentral_manage_tag = var.serviceauthcentral_manage_tag
+
     depends_on       = [ module.crossfiresyncrun ]
 }
