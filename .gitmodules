@@ -4,3 +4,6 @@
 [submodule "serviceauthcentral-kms-gcp-tofu"]
 	path = serviceauthcentral-kms-gcp-tofu
 	url = https://github.com/UnitVectorY-Labs/serviceauthcentral-kms-gcp-tofu.git
+[submodule "serviceauthcentral-firestore-gcp-tofu"]
+	path = serviceauthcentral-firestore-gcp-tofu
+	url = https://github.com/UnitVectorY-Labs/serviceauthcentral-firestore-gcp-tofu.git
