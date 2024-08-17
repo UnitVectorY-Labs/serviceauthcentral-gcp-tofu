@@ -1,0 +1,15 @@
+[submodule "crossfiresyncrun-tofu"]
+	path = crossfiresyncrun-tofu
+	url = https://github.com/UnitVectorY-Labs/crossfiresyncrun-tofu
+[submodule "serviceauthcentral-kms-gcp-tofu"]
+	path = serviceauthcentral-kms-gcp-tofu
+	url = https://github.com/UnitVectorY-Labs/serviceauthcentral-kms-gcp-tofu.git
+[submodule "serviceauthcentral-firestore-gcp-tofu"]
+	path = serviceauthcentral-firestore-gcp-tofu
+	url = https://github.com/UnitVectorY-Labs/serviceauthcentral-firestore-gcp-tofu.git
+[submodule "serviceauthcentral-token-gcp-tofu"]
+	path = serviceauthcentral-token-gcp-tofu
+	url = https://github.com/UnitVectorY-Labs/serviceauthcentral-token-gcp-tofu.git
+[submodule "serviceauthcentral-manage-gcp-tofu"]
+	path = serviceauthcentral-manage-gcp-tofu
+	url = https://github.com/UnitVectorY-Labs/serviceauthcentral-manage-gcp-tofu.git

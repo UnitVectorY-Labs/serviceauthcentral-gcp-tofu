@@ -1,15 +1,13 @@
 
 module "serviceauthcentral_kms_gcp" {
-    # TODO: This should pull in a release version of the module, not just pull from main
-    source           = "git::https://github.com/UnitVectorY-Labs/serviceauthcentral-kms-gcp-tofu.git?ref=main"
+    source           = "./serviceauthcentral-kms-gcp-tofu"
     name             = var.name
     project_id       = var.project_id
     kms_existing_key = var.kms_existing_key
 }
 
 module "crossfiresyncrun" {
-    # TODO: This should pull in a release version of the module, not just pull from main
-    source                       = "git::https://github.com/UnitVectorY-Labs/crossfiresyncrun-tofu.git?ref=main"
+    source                       = "./crossfiresyncrun-tofu"
     name                         = var.name
     project_id                   = var.project_id
     regions                      = var.regions
@@ -23,8 +21,7 @@ module "crossfiresyncrun" {
 
 module "serviceauthcentral_firestore_gcp" {
     for_each              = toset(var.regions)
-    # TODO: This should pull in a release version of the module, not just pull from main
-    source                = "git::https://github.com/UnitVectorY-Labs/serviceauthcentral-firestore-gcp-tofu.git?ref=main"
+    source                = "./serviceauthcentral-firestore-gcp-tofu"
     database_name         = "${var.name}-${each.value}"
     project_id            = var.project_id
     region                = each.value
@@ -37,8 +34,7 @@ locals {
 }
 
 module "serviceauthcentral_token_gcp" {
-    # TODO: This should pull in a release version of the module, not just pull from main
-    source          = "git::https://github.com/UnitVectorY-Labs/serviceauthcentral-token-gcp-tofu.git?ref=main"
+    source          = "./serviceauthcentral-token-gcp-tofu"
     name            = var.name
     project_id      = var.project_id
     regions         = var.regions
@@ -62,8 +58,7 @@ module "serviceauthcentral_token_gcp" {
 }
 
 module "serviceauthcentral_manage_gcp" {
-    # TODO: This should pull in a release version of the module, not just pull from main
-    source           = "git::https://github.com/UnitVectorY-Labs/serviceauthcentral-manage-gcp-tofu.git?ref=main"
+    source           = "./serviceauthcentral-manage-gcp-tofu"
     name             = var.name
     project_id       = var.project_id
     regions          = var.regions
