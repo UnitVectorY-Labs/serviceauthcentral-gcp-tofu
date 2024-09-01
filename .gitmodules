@@ -13,3 +13,6 @@
 [submodule "serviceauthcentral-manage-gcp-tofu"]
 	path = serviceauthcentral-manage-gcp-tofu
 	url = https://github.com/UnitVectorY-Labs/serviceauthcentral-manage-gcp-tofu.git
+[submodule "serviceauthcentral-firestore-bootstrap-gcp-tofu"]
+	path = serviceauthcentral-firestore-bootstrap-gcp-tofu
+	url = https://github.com/UnitVectorY-Labs/serviceauthcentral-firestore-bootstrap-gcp-tofu.git

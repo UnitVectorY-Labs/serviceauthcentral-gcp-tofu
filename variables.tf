@@ -62,6 +62,11 @@ variable "sac_user_provider_github_clientsecret" {
   sensitive   = true
 }
 
+variable "sac_authorized_admin_user_clientid" {
+  description = "The client id of the initial admin user"
+  type        = string
+}
+
 variable "artifact_registry_host" {
   description = "The name of the Artifact Registry repository"
   type        = string
@@ -78,7 +83,7 @@ variable "artifact_registry_project_id" {
   type        = string
   default     = null
   validation {
-    condition   = var.artifact_registry_project_id == null || can(regex("^[a-z]([-a-z0-9]{0,61}[a-z0-9])?$", var.artifact_registry_project_id))
+    condition     = var.artifact_registry_project_id == null || can(regex("^[a-z]([-a-z0-9]{0,61}[a-z0-9])?$", var.artifact_registry_project_id))
     error_message = "The artifact_registry_project_id is a GCP project name which starts with a lowercase letter, is 1 to 63 characters long, contains only lowercase letters, digits, and hyphens, and does not end with a hyphen."
   }
 }
