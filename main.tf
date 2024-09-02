@@ -40,6 +40,13 @@ module "serviceauthcentral_firestore_bootstrap_gcp" {
   ]
 }
 
+module "serviceauthcentral_workload_identity_gcp" {
+  source     = "./serviceauthcentral-workload-identity-gcp-tofu"
+  name       = var.name
+  project_id = var.project_id
+  sac_issuer = var.sac_issuer
+}
+
 locals {
   region_db_names = { for region in var.regions : region => "${var.name}-${region}" }
   primary_region  = var.regions[0]

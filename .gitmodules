@@ -16,3 +16,6 @@
 [submodule "serviceauthcentral-firestore-bootstrap-gcp-tofu"]
 	path = serviceauthcentral-firestore-bootstrap-gcp-tofu
 	url = https://github.com/UnitVectorY-Labs/serviceauthcentral-firestore-bootstrap-gcp-tofu.git
+[submodule "serviceauthcentral-workload-identity-gcp-tofu"]
+	path = serviceauthcentral-workload-identity-gcp-tofu
+	url = https://github.com/UnitVectorY-Labs/serviceauthcentral-workload-identity-gcp-tofu.git
