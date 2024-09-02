@@ -29,11 +29,12 @@ module "serviceauthcentral_firestore_gcp" {
 }
 
 module "serviceauthcentral_firestore_bootstrap_gcp" {
-  source                   = "./serviceauthcentral-firestore-bootstrap-gcp-tofu"
-  database_name            = "${var.name}-${local.primary_region}"
-  project_id               = var.project_id
-  sac_issuer               = var.sac_issuer
-  authorized_user_clientid = var.sac_authorized_admin_user_clientid
+  source                       = "./serviceauthcentral-firestore-bootstrap-gcp-tofu"
+  database_name                = "${var.name}-${local.primary_region}"
+  project_id                   = var.project_id
+  sac_issuer                   = var.sac_issuer
+  authorized_user_clientid     = var.sac_authorized_admin_user_clientid
+  workload_federation_identity = "https://iam.googleapis.com/${module.serviceauthcentral_workload_identity_gcp.provider_name}"
   depends_on = [
     module.serviceauthcentral_firestore_gcp,
     module.crossfiresyncrun,
