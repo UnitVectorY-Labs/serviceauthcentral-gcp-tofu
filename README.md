@@ -21,10 +21,12 @@ No providers.
 | Name | Source | Version |
 |------|--------|---------|
 | <a name="module_crossfiresyncrun"></a> [crossfiresyncrun](#module\_crossfiresyncrun) | ./crossfiresyncrun-tofu | n/a |
+| <a name="module_serviceauthcentral_firestore_bootstrap_gcp"></a> [serviceauthcentral\_firestore\_bootstrap\_gcp](#module\_serviceauthcentral\_firestore\_bootstrap\_gcp) | ./serviceauthcentral-firestore-bootstrap-gcp-tofu | n/a |
 | <a name="module_serviceauthcentral_firestore_gcp"></a> [serviceauthcentral\_firestore\_gcp](#module\_serviceauthcentral\_firestore\_gcp) | ./serviceauthcentral-firestore-gcp-tofu | n/a |
 | <a name="module_serviceauthcentral_kms_gcp"></a> [serviceauthcentral\_kms\_gcp](#module\_serviceauthcentral\_kms\_gcp) | ./serviceauthcentral-kms-gcp-tofu | n/a |
 | <a name="module_serviceauthcentral_manage_gcp"></a> [serviceauthcentral\_manage\_gcp](#module\_serviceauthcentral\_manage\_gcp) | ./serviceauthcentral-manage-gcp-tofu | n/a |
 | <a name="module_serviceauthcentral_token_gcp"></a> [serviceauthcentral\_token\_gcp](#module\_serviceauthcentral\_token\_gcp) | ./serviceauthcentral-token-gcp-tofu | n/a |
+| <a name="module_serviceauthcentral_workload_identity_gcp"></a> [serviceauthcentral\_workload\_identity\_gcp](#module\_serviceauthcentral\_workload\_identity\_gcp) | ./serviceauthcentral-workload-identity-gcp-tofu | n/a |
 
 ## Resources
 
@@ -43,6 +45,7 @@ No resources.
 | <a name="input_name"></a> [name](#input\_name) | The name of the application | `string` | `"serviceauthcentral"` | no |
 | <a name="input_project_id"></a> [project\_id](#input\_project\_id) | The GCP project id | `string` | n/a | yes |
 | <a name="input_regions"></a> [regions](#input\_regions) | List of regions where resources will be created | `list(string)` | n/a | yes |
+| <a name="input_sac_authorized_admin_user_clientid"></a> [sac\_authorized\_admin\_user\_clientid](#input\_sac\_authorized\_admin\_user\_clientid) | The client id of the initial admin user | `string` | n/a | yes |
 | <a name="input_sac_cors_origins"></a> [sac\_cors\_origins](#input\_sac\_cors\_origins) | The SAC\_CORS\_ORIGINS envirionment variable specifying the allowed origins | `string` | n/a | yes |
 | <a name="input_sac_issuer"></a> [sac\_issuer](#input\_sac\_issuer) | The SAC\_ISSUER envirionment variable specifying the issuer | `string` | n/a | yes |
 | <a name="input_sac_user_provider_github_clientid"></a> [sac\_user\_provider\_github\_clientid](#input\_sac\_user\_provider\_github\_clientid) | The SAC\_USER\_PROVIDER\_GITHUB\_CLIENTID envirionment variable specifying the GitHub client id | `string` | n/a | yes |
@@ -53,5 +56,8 @@ No resources.
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_manage_region_service_map"></a> [manage\_region\_service\_map](#output\_manage\_region\_service\_map) | n/a |
+| <a name="output_token_region_service_map"></a> [token\_region\_service\_map](#output\_token\_region\_service\_map) | n/a |
 <!-- END_TF_DOCS -->
