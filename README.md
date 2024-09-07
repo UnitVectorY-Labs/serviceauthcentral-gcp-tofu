@@ -2,7 +2,7 @@
 
 # serviceauthcentral-gcp-tofu
 
-OpenTofu module for deploying a fully working ServiceAuthCentral deployment
+OpenTofu module for deploying a fully working ServiceAuthCentral deployment in GCP
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
