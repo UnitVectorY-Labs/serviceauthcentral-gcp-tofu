@@ -11,7 +11,7 @@ OpenTofu module for deploying a fully working ServiceAuthCentral deployment in G
 - [serviceauthcentralweb](https://github.com/UnitVectorY-Labs/serviceauthcentralweb) - Web based management interface for ServiceCloudAuth
 - [serviceauthcentral-gcp-tofu](https://github.com/UnitVectorY-Labs/serviceauthcentral-gcp-tofu) - OpenTofu module for deploying a fully working ServiceAuthCentral deployment in GCP
 
-### Terraform Modules
+### Tofu Modules
 
 - [serviceauthcentral-token-gcp-tofu](https://github.com/UnitVectorY-Labs/serviceauthcentral-token-gcp-tofu) - OpenTofu module for deploying ServiceAuthCentral token API to Cloud Run in GCP
 - [serviceauthcentral-manage-gcp-tofu](https://github.com/UnitVectorY-Labs/serviceauthcentral-manage-gcp-tofu) - OpenTofu module for deploying ServiceAuthCentral manage API to Cloud Run in GCP
