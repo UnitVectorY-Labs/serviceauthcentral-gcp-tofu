@@ -5,7 +5,7 @@
 
 version: 2
 updates:
-  - package-ecosystem: "gitsubmodule"
+  - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "weekly"
@@ -20,7 +20,8 @@ updates:
       day: "saturday"
       time: "07:00"
       timezone: "America/New_York"
-  - package-ecosystem: "github-actions"
+    open-pull-requests-limit: 20
+  - package-ecosystem: "gitsubmodule"
     directory: "/"
     schedule:
       interval: "weekly"
