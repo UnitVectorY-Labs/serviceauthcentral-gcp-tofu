@@ -11,7 +11,7 @@ jobs:
       with:
         ref: ${{ github.event.pull_request.head.ref }}
         submodules: true  # Fetch submodules
-        persist-credentials: false
+        persist-credentials: true
 
     - name: Render terraform docs inside the README.md and push changes back to PR branch
       uses: terraform-docs/gh-actions@v1.3.0
