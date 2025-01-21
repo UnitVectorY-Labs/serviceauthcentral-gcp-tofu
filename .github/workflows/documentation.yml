@@ -5,12 +5,10 @@ jobs:
   docs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
-    
     steps:
     - uses: actions/checkout@v4
       with:
         ref: ${{ github.event.pull_request.head.ref }}
-        submodules: true  # Fetch submodules
         persist-credentials: true
 
     - name: Render terraform docs inside the README.md and push changes back to PR branch
